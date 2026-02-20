@@ -1,0 +1,80 @@
+<div id="formservicepro" class="formssect">
+                         <form name="form" (ngSubmit)="fserv.form.valid && register()" #fserv="ngForm" novalidate>
+                            <div class="register-forms loger-forms">
+                                <div class="container">
+                                	<div class="row loginfrm" style="padding:0 15%;">
+                                        <div class="col-md-7 pull-left">
+                                            <div class="col-md-12 pull-right">
+                                                <div class="full_width clearfix pull-right">
+                                                    <div class="verti-label">
+                                                        <label for="">{{'Username'|translate}}: </label>
+                                                    </div>
+                                                    <div class="verti-input">
+                                                        <input class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" placeholder="{{'Name of your Penderie'|translate}}" type="text" required><span *ngIf="f.submitted && !username.valid" class="field_error">*</span>
+                                                        <div class="pull-right"><a href="javascript:void(0)">Forgot your email?</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="full_width clearfix pull-right">
+                                                     <div class="verti-label">
+                                                        <label for="">{{'Password'|translate}}: </label>
+                                                    </div>
+                                                   <div class="verti-input">
+                                                        <input class="form-control" [(ngModel)]="model.password" name="password" #password="ngModel" placeholder="Key" type="password"><span *ngIf="f.submitted && !password.valid" class="field_error">*</span>			
+                                                        <div class="pull-right"><a href="javascript:void(0)">Forgot your password?</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="full_width clearfix pull-right">
+                                                   <div class="pull-right">
+                                                        <button type="submit" class="btn pi-apts-btn">Login</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="seporator col-md-1">
+                                            <div class="or-optioner">OR</div>
+                                        </div>
+                                        <div class="col-sm-4 pull-right social_loginsection padding_right" style="padding:none;">	
+                                            <div class="col-md-11 rst-rgester-right-bOx padding_none">
+                                                <a  href="javascript:void(0)"><img src="assets/img/twitter.png"></a>
+                                                <a (click)="signInWithFB()"><img src="assets/img/facebook.png"></a>
+                                                <a href="javascript:void(0)"><img src="assets/img/linkedin.png"></a>
+                                                <a (click)="signInWithGoogle()"><img src="assets/img/google.png"></a>
+                                                <p>By Continuing, you acknowledge and agree to Penderie's <a href="javascript:void(0)">Terms & Conditions and Privacy Policy</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </form>
+                    </div>
+                
+                <div id="menu2" class="tab-pane fade">
+                    <div id="formdesigner" class="formssect">
+                         <form name="form" (ngSubmit)="fdes.form.valid && register()" #fdes="ngForm" novalidate>
+                            <div class="register-forms">
+                                <div class="container">
+                                    <div class="rgester-left-bOx clearfix" style="width: 100%;padding: 0 10%; border:0px;">
+                                        <div class="opters-cleare clearfix widh-50per">
+                                            <div class="lefter-rg-label">{{'Username'|translate}}:</div>
+                                            <div class="lefter-rg-inputer">
+                                                <ul class="clearfix">
+                                                    <li><input class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" placeholder="{{'Name of your Penderie'|translate}}" type="text" required><span *ngIf="f.submitted && !username.valid" class="field_error">*</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="opters-cleare clearfix widh-50per">
+                                            <div class="lefter-rg-label text-center">{{'Password'|translate}}:</div>
+                                            <div class="lefter-rg-inputer">
+                                                <ul class="clearfix">
+                                                    <li class="padd-remover"><input class="form-control" [(ngModel)]="model.password" name="password" #password="ngModel" placeholder="Key" type="password"><span *ngIf="f.submitted && !password.valid" class="field_error">*</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="reg-urls-div">{{'Public profile URL: www.penderie.com/members/username'|translate}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                         </form>
+                    </div>
+                </div>
